@@ -26,34 +26,32 @@
                 {
                   "type": "horizontal",
                   "items": {
-                    "{{#each items}}": {
-                      "type": "vertical",
-                      "style": {
-                        "background": "#fafafa",
-                        "padding": "9",
-                        "spacing": "13",
-                        "width": "90",
-                        "align": "center",
-                        "distribution": "equalspacing",
-                        "height": "120"
-                      },
-                      "components": [
-                        {
-                          "type": "label",
-                          "url": "{{currency}}",
-                          "style": {
-                            "size": "12"
-                          }
-                        },
-                        {
-                          "type": "label",
-                          "text": "{{cardNumber}}",
-                          "style": {
-                            "size": "12"
-                          }
+                    "type": "vertical",
+                    "style": {
+                      "background": "#fafafa",
+                      "padding": "9",
+                      "spacing": "13",
+                      "width": "90",
+                      "align": "center",
+                      "distribution": "equalspacing",
+                      "height": "120"
+                    },
+                    "components": [
+                      {
+                        "type": "label",
+                        "url": "{{currency}}",
+                        "style": {
+                          "size": "12"
                         }
-                      ]
-                    }
+                      },
+                      {
+                        "type": "label",
+                        "text": "{{cardNumber}}",
+                        "style": {
+                          "size": "12"
+                        }
+                      }
+                    ]
                   }
                 }
               ]
