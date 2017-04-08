@@ -20,7 +20,6 @@
           },
           "sections": {
             "{{#each corporations}}": {
-              "items": {
                 "type": "horizontal",
                 "style": {
                   "background": "#fafafa",
@@ -63,7 +62,6 @@
                     ]
                   }
                 ]
-              }
             },
             "footer": {
               "tabs": {
