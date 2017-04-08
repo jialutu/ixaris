@@ -63,8 +63,18 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "http://ec3a1990.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
-              "method": "get"
+              "url": "https://app-gateway.hackathon.ixaris.com/api/auth/login",
+              "method": "post",
+              "data" : {
+                  "programmeId": "996141146944271",
+                  "credentialCode": "team-16",
+                  "password": "1No2EXk&"
+                },
+                "header" : {
+                  "Content-Type": "application/json",
+                  "X-callref": "1No2EXk&",
+                  "X-programmeKey": "team-16|996141146944271"
+                }
             },
             "success": {
               "type": "$session.set",
@@ -74,7 +84,7 @@
                   "Content-Type": "application/json",
                   "X-callref": "{{$jason.email}}",
                   "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
-                  "authorization": "{{$jason.authentication_token}}"
+                  "authorization": "{{$jason.token}}"
                 }
               },
               "success": {
@@ -115,8 +125,18 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "http://ec3a1990.ngrok.io/{{$get.credentialCode}}/{{$get.password}}",
-              "method": "get"
+              "url": "https://app-gateway.hackathon.ixaris.com/api/auth/login",
+              "method": "post",
+              "data" : {
+                  "programmeId": "996141146944271",
+                  "credentialCode": "team-16",
+                  "password": "1No2EXk&"
+                },
+                "header" : {
+                  "Content-Type": "application/json",
+                  "X-callref": "1No2EXk&",
+                  "X-programmeKey": "team-16|996141146944271"
+                }
             },
             "success": {
               "type": "$session.set",
@@ -126,7 +146,7 @@
                   "Content-Type": "application/json",
                   "X-callref": "{{$jason.email}}",
                   "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
-                  "authorization": "{{$jason.authentication_token}}"
+                  "authorization": "{{$jason.token}}"
                 }
               },
               "success": {

@@ -62,7 +62,7 @@ def get_cards():
 
   results = json.loads(results.decode('utf-8'))
 
-  return results
+  return results['cards']
 
 def create_corporation(name, support_email, notification_email):
   with open('key.json', 'r') as f:
