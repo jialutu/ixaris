@@ -19,6 +19,7 @@
             }
           },
           "sections": {
+            "items": {
             "{{#each corporations}}": {
                 "type": "horizontal",
                 "style": {
@@ -62,8 +63,8 @@
                     ]
                   }
                 ]
-            }
-          },
+              }
+            }},
             "footer": {
               "tabs": {
                 "style": {
