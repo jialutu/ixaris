@@ -2,9 +2,13 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations":
-          [{"currency": "GBP", "cardNumber": "1"}]
-        ,
+        "corporations": [
+          {
+            "currency": "GBP",
+            "cardNumber": "1"
+          }
+        ]
+      },
         "templates": {
           "body": {
             "sections": {
@@ -44,7 +48,6 @@
             }
           }
         }
-      }
     }
   }
 }
