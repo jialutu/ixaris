@@ -28,19 +28,19 @@ def get_token(programmeID="996141146944271", credentialCode="team-16", password=
 
   return header
 
-def issue_card():
+def issue_card(friendlyName, issuingProvider, processingProvider, nameOnCard, profileID="97593089101269248", ownerID="87593085012710413", currency="GBP"):
   with open('key.json', 'r') as f:
     header = f.read()
     header = json.loads(header.replace("'", '"'))
 
   data = {
-    "profileId": "97593089101269248",
-    "ownerId": "87593085012710413",
-    "friendlyName": "My third card",
-    "currency": "GBP",
-    "issuingProvider": "IssuingProvider",
-    "processingProvider": "ProcessingProvider",
-    "nameOnCard": "Jane Doe"
+    "profileId": profileID,
+    "ownerId": ownerID,
+    "friendlyName": friendlyName,
+    "currency": currency,
+    "issuingProvider": issuingProvider,
+    "processingProvider": processingProvider,
+    "nameOnCard": nameOnCard
   }
 
   req = request.Request(default_api + "/managed_cards/_/create", data=str(data).encode('utf-8'), headers=header, method='POST')

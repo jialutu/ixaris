@@ -21,7 +21,7 @@
           "height": "10"
         }, {
           "type": "textfield",
-          "name": "email",
+          "name": "credentialCode",
           "style": {
             "size": "20",
             "color": "#8bb92d",
@@ -29,7 +29,7 @@
             "background": "#575757",
             "padding": "20"
           },
-          "placeholder": "enter email"
+          "placeholder": "enter credential code"
         }, {
           "type": "space",
           "height": "5"
@@ -63,17 +63,13 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "ROOT/users/sign_in.json",
-              "method": "post",
-              "data": {
-                "user[email]": "{{$get.email}}",
-                "user[password]": "{{$get.password}}"
-              }
+              "url": "http://ec3a1990.ngrok.io/{{$get.credentialCode}}/{{$get.password}}",
+              "method": "get"
             },
             "success": {
               "type": "$session.set",
               "options": {
-                "domain": "ROOT",
+                "domain": "http://ec3a1990.ngrok.io",
                 "header": {
                   "X-User-Email": "{{$jason.email}}",
                   "X-User-Token": "{{$jason.authentication_token}}"
@@ -82,7 +78,7 @@
               "success": {
                 "type": "$href",
                 "options": {
-                  "url": "ROOT/posts.json",
+                  "url": "http://ec3a1990.ngrok.io/posts.json",
                   "transition": "replace"
                 }
               }
@@ -117,17 +113,13 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "ROOT/users.json",
-              "method": "post",
-              "data": {
-                "user[email]": "{{$get.email}}",
-                "user[password]": "{{$get.password}}"
-              }
+              "url": "http://ec3a1990.ngrok.io/{{$get.credentialCode}}/{{$get.password}}",
+              "method": "get"
             },
             "success": {
               "type": "$session.set",
               "options": {
-                "domain": "ROOT",
+                "domain": "http://ec3a1990.ngrok.io",
                 "header": {
                   "X-User-Email": "{{$jason.email}}",
                   "X-User-Token": "{{$jason.authentication_token}}"
@@ -136,7 +128,7 @@
               "success": {
                 "type": "$href",
                 "options": {
-                  "url": "ROOT/posts.json",
+                  "url": "http://ec3a1990.ngrok.io/posts.json",
                   "transition": "replace"
                 }
               }
