@@ -19,6 +19,8 @@
             }
           },
           "sections": {
+            "type": "vertical",
+            "items": {
             "{{#each cards}}": {
                 "type": "vertical",
                 "components": [
@@ -50,6 +52,7 @@
                   ]
                 }
               }
+			  }
             ,
             "footer": {
               "tabs": {
