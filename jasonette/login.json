@@ -93,58 +93,6 @@
               }
             }
           }
-        }, {
-          "type": "label",
-          "style": {
-            "size": "16",
-            "font": "HelveticaNeue-Bold",
-            "text": "or",
-            "padding": "10",
-            "align": "center"
-          }
-        }, {
-          "type": "label",
-          "text": "Sign up >",
-          "style": {
-            "align": "right",
-            "size": "20",
-            "padding": "10",
-            "font": "HelveticaNeue-Bold",
-            "color": "#ffffff"
-          },
-          "action": {
-            "type": "$network.request",
-            "options": {
-              "url": "http://ec3a1990.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
-              "method": "get"
-            },
-            "success": {
-              "type": "$session.set",
-              "options": {
-                "domain": "http://ec3a1990.ngrok.io",
-                "header": {
-                  "Content-Type": "application/json",
-                  "X-callref": "{{$get.password}}",
-                  "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
-                  "authorization": "{{$jason.authorization}}"
-                }
-              },
-              "success": {
-                "type": "$href",
-                "options": {
-                  "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json",
-                  "transition": "replace"
-                }
-              }
-            },
-            "error": {
-              "type": "$util.banner",
-              "options": {
-                "title": "Enter credentials",
-                "description": "Please enter both credential code and password"
-              }
-            }
-          }
         }]
       }]
     }
