@@ -2,30 +2,17 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations": {
-            "action": {
-              "type": "$network.request",
-              "options": {
-                "url": "http://ec3a1990.ngrok.io/cards"
-              }
-            },
-            "success": {
-                "type": "$render"
-            },
-            "error": {
-              "type": "$render",
-              "options": {
-                "template": "empty_template"
-              }
-            }
-        },
+        "corporations":
+        [{"destroyType": "NOT_DESTROYED", "expiryPeriod": {"periodLength": 1, "timeUnit": "YEARS"}, "currency": "GBP", "blocks": [], "startDate": "04/17", "cardNumber": "4716720403638489", "actions": ["UPDATE", "BLOCK", "UNBLOCK", "DESTROY"], "nameOnCard": "John Doe", "issuingProvider": "IssuingProvider", "processingProvider": "ProcessingProvider", "cardLevelClassification": "CORPORATE", "currentNumberOfSpends": 0, "friendlyName": "My first card", "creationTimestamp": "1491606918521", "programmeId": "996141146944271", "cardBrand": "VISA", "profileId": "97593089101269248", "balances": {"currency": "GBP", "actual": "0", "reserved": "0", "available": "0"}, "id": {"id": "97753949937860608", "type": "managed_cards"}, "endDate": "04/18", "ownerId": "87593085012710413", "currentNumberOfLoads": 0, "state": "ACTIVE", "type": "VIRTUAL", "renewalType": "NO_RENEW"}, {"maxNumberOfLoads": {"value": 0, "hasValue": False}, "destroyType": "NOT_DESTROYED", "expiryPeriod": {"periodLength": 1, "timeUnit": "YEARS"}, "currency": "GBP", "blocks": [], "maxNumberOfSpends": {"value": 0, "hasValue": False}, "startDate": "04/17", "cardNumber": "4916527798657158", "actions": ["UPDATE", "BLOCK", "UNBLOCK", "DESTROY"], "nameOnCard": "Jane Doe", "issuingProvider": "IssuingProvider", "processingProvider": "ProcessingProvider", "cardLevelClassification": "CORPORATE", "currentNumberOfSpends": 0, "friendlyName": "My second card", "creationTimestamp": "1491651221675", "programmeId": "996141146944271", "cardBrand": "VISA", "profileId": "97593089101269248", "balances": {"currency": "GBP", "actual": "0", "reserved": "0", "available": "0"}, "id": {"id": "97756853389492224", "type": "managed_cards"}, "endDate": "04/18", "ownerId": "87593085012710413", "currentNumberOfLoads": 0, "state": "ACTIVE", "type": "VIRTUAL", "renewalType": "NO_RENEW"}]
+          ,
         "templates": {
           "body": {
             "sections": {
               "{{#each corporations}}": [
                 {
                   "type": "horizontal",
-                  "items": {
+                  "items":
+                  "{{#each items}}": {
                     "type": "vertical",
                     "style": {
                       "background": "#fafafa",
@@ -54,6 +41,7 @@
                     ]
                   }
                 }
+              }
               ]
             }
           }

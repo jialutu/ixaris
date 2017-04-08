@@ -17,7 +17,7 @@ def accounts():
 
 @app.route("/cards")
 def cards():
-  return str(get_cards())
+  return str(get_cards()).replace("'", '"')
 
 if __name__ == "__main__":
   app.run()
