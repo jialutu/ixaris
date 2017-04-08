@@ -102,6 +102,45 @@ def get_corporations():
 
   return results['identities']
 
+def create_accounts(name, support_email, notification_email):
+  with open('key.json', 'r') as f:
+    header = f.read()
+    header = json.loads(header.replace("'", '"'))
+
+  data = {
+    "name": name,
+    "profileId": "97593089101268736",
+    "rootCredentialCode": "string",
+    "supportEmail": support_email,
+    "notificationEmail": notification_email,
+    "adminTitle": "Mr",
+    "adminName": "string",
+    "adminSurname": "string",
+    "adminEmail": "string"
+  }
+
+  req = request.Request(default_api + "/managed_accounts/_/create", data=str(data).encode('utf-8'), headers=header, method='POST')
+  res = request.urlopen(req, timeout=5)
+
+  print(res.read())
+
+def get_accounts():
+  with open('key.json', 'r') as f:
+    header = f.read()
+    header = json.loads(header.replace("'", '"'))
+
+  data = {}
+
+  req = request.Request(default_api + "/managed_accounts/profiles/get", data=str(data).encode('utf-8'), headers=header, method='POST')
+  res = request.urlopen(req, timeout=5)
+
+  results = res.read()
+
+  results = json.loads(results.decode('utf-8'))
+
+  return results['profiles']
+
 if __name__ == '__main__':
-  a = get_corporations()
-  [print(i) for i in a if i['state'] == 'ACTIVE']
+  a = get_accounts()
+  #[print(i) for i in a if i['state'] == 'ACTIVE']
+  print(str(a))

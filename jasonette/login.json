@@ -63,7 +63,7 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "http://ec3a1990.ngrok.io/{{$get.credentialCode}}/{{$get.password}}",
+              "url": "http://ec3a1990.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
               "method": "get"
             },
             "success": {
@@ -71,8 +71,10 @@
               "options": {
                 "domain": "http://ec3a1990.ngrok.io",
                 "header": {
-                  "X-User-Email": "{{$jason.email}}",
-                  "X-User-Token": "{{$jason.authentication_token}}"
+                  "Content-Type": "application/json",
+                  "X-callref": "{{$jason.email}}",
+                  "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
+                  "authorization": "{{$jason.authentication_token}}"
                 }
               },
               "success": {
@@ -87,7 +89,7 @@
               "type": "$util.banner",
               "options": {
                 "title": "Error",
-                "description": "Something went wrong. Please check if you entered your email and password correctly"
+                "description": "Something went wrong. Please check if you entered your credential code and password correctly"
               }
             }
           }
@@ -121,8 +123,10 @@
               "options": {
                 "domain": "http://ec3a1990.ngrok.io",
                 "header": {
-                  "X-User-Email": "{{$jason.email}}",
-                  "X-User-Token": "{{$jason.authentication_token}}"
+                  "Content-Type": "application/json",
+                  "X-callref": "{{$jason.email}}",
+                  "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
+                  "authorization": "{{$jason.authentication_token}}"
                 }
               },
               "success": {
@@ -137,7 +141,7 @@
               "type": "$util.banner",
               "options": {
                 "title": "Enter credentials",
-                "description": "Please enter both email and password"
+                "description": "Please enter both credential code and password"
               }
             }
           }
