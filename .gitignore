@@ -91,7 +91,7 @@ ENV/
 
 #ignore csv and json files
 *.csv
-*.json
+key.json
 
 **/.vagrant/
 
