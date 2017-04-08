@@ -18,12 +18,12 @@
               "color": "#ffffff"
             }
           },
-          "sections": [{
+          "sections": {
               "items": {
                 "type": "label",
                 "text": "Label only item"
               }
-            }]
+            }
             ,
             "footer": {
               "tabs": {
