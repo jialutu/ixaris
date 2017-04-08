@@ -6,6 +6,10 @@
           {
             "currency": "GBP",
             "cardNumber": "1"
+          },
+          {
+            "currency": "GBP",
+            "cardNumber": "2"
           }
         ]
       },
@@ -18,26 +22,38 @@
               "color": "#ffffff"
             }
           },
-          "sections": {
-            "components": [
-                    {
-                          "type": "label",
-                          "text": "something",
-                          "style": {
-                            "font": "HelveticaNeue-Bold",
-                            "size": "12"
-                          }
-                    },
-                    {
-                          "type": "label",
-                          "text": "else",
-                          "style": {
-                            "font": "HelveticaNeue",
-                            "size": "12"
-                          }
+          "sections": [{
+            "items": {
+              "{{#each cards}}": {
+                "type": "vertical",
+                "style": {
+                    "padding": "0"
+                  },
+                "components": [
+                  {
+                    "type": "image",
+                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true"
+                  },
+                  {
+                    "type": "label",
+                    "text": "{{currency}}",
+                    "style": {
+                      "font": "HelveticaNeue-Bold",
+                      "size": "16"
                     }
-              ]
-          }
+                  },
+                  {
+                    "type": "label",
+                    "text": "{{cardNumber}}",
+                    "style": {
+                      "font": "HelveticaNeue",
+                      "size": "16"
+                    }
+                  }
+                ]
+              }
+            }
+          }]
             ,
             "footer": {
               "tabs": {
@@ -51,35 +67,21 @@
                     "style": {
                       "height": "21"
                     },
-                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/home.json"
-                  },
-                  {
-                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/search.png",
-                    "style": {
-                      "height": "21"
-                    },
-                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/search.json"
-                  },
-                  {
-                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
-                    "style": {
-                      "height": "21"
-                    },
-                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/camera.json"
-                  },
-                  {
-                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/heart.png",
-                    "style": {
-                      "height": "21"
-                    },
-                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/heart.json"
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json"
                   },
                   {
                     "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/profile.png",
                     "style": {
                       "height": "21"
                     },
-                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/profile.json"
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/accounts.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/cards.json"
                   }
                 ]
               }

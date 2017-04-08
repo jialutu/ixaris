@@ -2,92 +2,90 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations": {
-          "items": {
-            "type": "$network.request",
-            "options": {
-              "url": "http://ec3a1990.ngrok.io/corporations",
-              "method": "get"
-            }
-      }},
+        "corporations": [
+          {
+            "currency": "GBP",
+            "cardNumber": "1"
+          },
+          {
+            "currency": "GBP",
+            "cardNumber": "2"
+          }
+        ]
+      },
       "templates": {
         "body": {
-          "sections": {
-            "{{#each corporations}}": [
-              {
-
-                  "type": "horizontal",
-                  "items": {
-                    "{{#each items}}": {
-                      "type": "vertical",
-                      "style": {
-                        "background": "#fafafa",
-                        "padding": "9",
-                        "spacing": "13",
-                        "width": "90",
-                        "align": "center",
-                        "distribution": "equalspacing",
-                        "height": "120"
-                      },
-                      "components": [{
-                        "type": "image",
-                        "url": "{{avatar}}",
-                        "style": {
-                          "width": "76",
-                          "height": "76",
-                          "corner_radius": "38"
-                        }
-                      }, {
-                        "type": "label",
-                        "text": "{{name}}",
-                        "style": {
-                          "size": "12"
-                        }
-                      }]
+          "header": {
+            "title": "All cards",
+            "style": {
+              "background": "#646464",
+              "color": "#ffffff"
+            }
+          },
+          "sections": [{
+            "items": {
+              "{{#each corporations}}": {
+                "type": "vertical",
+                "style": {
+                    "padding": "0"
+                  },
+                "components": [
+                  {
+                    "type": "image",
+                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true"
+                  },
+                  {
+                    "type": "label",
+                    "text": "{{currency}}",
+                    "style": {
+                      "font": "HelveticaNeue-Bold",
+                      "size": "16"
+                    }
+                  },
+                  {
+                    "type": "label",
+                    "text": "{{cardNumber}}",
+                    "style": {
+                      "font": "HelveticaNeue",
+                      "size": "16"
                     }
                   }
-                }
-            ]
-          },
-          "footer": {
-            "tabs": {
-              "style": {
-                "background": "rgba(255,255,255,0.8)",
-                "color": "#000000"
-              },
-              "items": [{
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/home.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/home.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/search.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/search.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/camera.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/heart.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/heart.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/profile.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/profile.json"
-              }]
+                ]
+              }
             }
-          }
+          }]
+            ,
+            "footer": {
+              "tabs": {
+                "style": {
+                  "background": "rgba(255,255,255,0.8)",
+                  "color": "#000000"
+                },
+                "items": [
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/home.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/profile.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/accounts.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/cards.json"
+                  }
+                ]
+              }
+            }
         }
       }
     }
