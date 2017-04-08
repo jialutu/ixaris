@@ -63,18 +63,8 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "https://app-gateway.hackathon.ixaris.com/api/auth/login",
-              "method": "post",
-              "data" : {
-                  "programmeId": "996141146944271",
-                  "credentialCode": "team-16",
-                  "password": "1No2EXk&"
-                },
-                "header" : {
-                  "Content-Type": "application/json",
-                  "X-callref": "1No2EXk&",
-                  "X-programmeKey": "team-16|996141146944271"
-                }
+              "url": "http://ec3a1990.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
+              "method": "get"
             },
             "success": {
               "type": "$session.set",
@@ -82,7 +72,7 @@
                 "domain": "http://ec3a1990.ngrok.io",
                 "header": {
                   "Content-Type": "application/json",
-                  "X-callref": "{{$jason.email}}",
+                  "X-callref": "{{$get.password}}",
                   "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
                   "authorization": "{{$jason.token}}"
                 }
@@ -90,7 +80,7 @@
               "success": {
                 "type": "$href",
                 "options": {
-                  "url": "http://ec3a1990.ngrok.io/posts.json",
+                  "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json",
                   "transition": "replace"
                 }
               }
@@ -125,18 +115,8 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "https://app-gateway.hackathon.ixaris.com/api/auth/login",
-              "method": "post",
-              "data" : {
-                  "programmeId": "996141146944271",
-                  "credentialCode": "team-16",
-                  "password": "1No2EXk&"
-                },
-                "header" : {
-                  "Content-Type": "application/json",
-                  "X-callref": "1No2EXk&",
-                  "X-programmeKey": "team-16|996141146944271"
-                }
+              "url": "http://ec3a1990.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
+              "method": "get"
             },
             "success": {
               "type": "$session.set",
@@ -144,7 +124,7 @@
                 "domain": "http://ec3a1990.ngrok.io",
                 "header": {
                   "Content-Type": "application/json",
-                  "X-callref": "{{$jason.email}}",
+                  "X-callref": "{{$get.password}}",
                   "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
                   "authorization": "{{$jason.token}}"
                 }
@@ -152,7 +132,7 @@
               "success": {
                 "type": "$href",
                 "options": {
-                  "url": "http://ec3a1990.ngrok.io/posts.json",
+                  "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json",
                   "transition": "replace"
                 }
               }
