@@ -9,11 +9,11 @@ def auth(username, password):
 
 @app.route("/corporations")
 def corporations():
-  return str(get_corporations())
+  return str(get_corporations()).replace("'", '"')
 
 @app.route("/accounts")
 def accounts():
-  return str(get_accounts())
+  return str(get_accounts()).replace("'", '"')
 
 @app.route("/cards")
 def cards():

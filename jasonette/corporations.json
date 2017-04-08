@@ -2,21 +2,20 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations": [
-          {
-            "currency": "GBP",
-            "cardNumber": "1"
-          },
-          {
-            "currency": "GBP",
-            "cardNumber": "2"
+        "corporations": {
+            "type": "$network.request",
+            "options": {
+              "url": "http://ec3a1990.ngrok.io/corporations"
+            },
+            "success": {
+              "type": "$render"
+            }
           }
-        ]
       },
       "templates": {
         "body": {
           "header": {
-            "title": "All cards",
+            "title": "All corporations",
             "style": {
               "background": "#646464",
               "color": "#ffffff"
@@ -27,24 +26,20 @@
               "{{#each corporations}}": {
                 "type": "vertical",
                 "style": {
-                    "padding": "0"
+                    "padding": "10"
                   },
                 "components": [
                   {
-                    "type": "image",
-                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true"
-                  },
-                  {
                     "type": "label",
-                    "text": "{{currency}}",
+                    "text": "{{name}}",
                     "style": {
                       "font": "HelveticaNeue-Bold",
-                      "size": "16"
+                      "size": "24"
                     }
                   },
                   {
                     "type": "label",
-                    "text": "{{cardNumber}}",
+                    "text": "{{profileId}}",
                     "style": {
                       "font": "HelveticaNeue",
                       "size": "16"

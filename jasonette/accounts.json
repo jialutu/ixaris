@@ -16,7 +16,7 @@
       "templates": {
         "body": {
           "header": {
-            "title": "All cards",
+            "title": "All accounts",
             "style": {
               "background": "#646464",
               "color": "#ffffff"
