@@ -19,8 +19,8 @@
             }
           },
           "sections": {
+            "items": {
             "{{#each corporations}}": {
-              "items": {
                 "type": "vertical",
                 "components": [
                   {
