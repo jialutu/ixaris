@@ -22,23 +22,24 @@
             }
           },
           "sections": [{
-            "items": [{
+            "items": {
+              "{{#each $jason.profiles}}": {
                 "type": "vertical",
                 "style": {
-                    "padding": "16"
+                    "padding": "10"
                   },
                 "components": [
                   {
                     "type": "label",
-                    "text": "{{$jason.id}}",
+                    "text": "{{id}}",
                     "style": {
                       "font": "HelveticaNeue-Bold",
-                      "size": "16"
+                      "size": "24"
                     }
                   },
                   {
                     "type": "label",
-                    "text": "{{$jason.programmeId}}",
+                    "text": "{{programmeId}}",
                     "style": {
                       "font": "HelveticaNeue",
                       "size": "16"
@@ -46,14 +47,23 @@
                   },
                   {
                     "type": "label",
-                    "text": "{{$jason.name}}",
+                    "text": "{{name}}",
+                    "style": {
+                      "font": "HelveticaNeue",
+                      "size": "16"
+                    }
+                  },
+                  {
+                    "type": "label",
+                    "text": "{{active}}",
                     "style": {
                       "font": "HelveticaNeue",
                       "size": "16"
                     }
                   }
                 ]
-            }]
+              }
+            }
           }]
             ,
             "footer": {
