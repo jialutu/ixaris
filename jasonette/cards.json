@@ -18,7 +18,7 @@
               "color": "#ffffff"
             }
           },
-          "sections": {
+          "sections": [{
               "type": "vertical",
                 "components": [
                     {
@@ -42,7 +42,7 @@
                           }
                     }
                   ]
-                }
+                }]
             ,
             "footer": {
               "tabs": {
