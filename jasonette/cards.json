@@ -2,7 +2,7 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations": [
+        "cards": [
           {
             "currency": "GBP",
             "cardNumber": "1"
@@ -19,7 +19,7 @@
             }
           },
           "sections": {
-            "{{#each corporations}}": {
+            "{{#each cards}}": {
                 "type": "vertical",
                 "components": [
                     {
@@ -32,27 +32,24 @@
                       }
                     },
                     {
-                      "components": [
-                        {
                           "type": "label",
                           "text": "{{currency}}",
                           "style": {
                             "font": "HelveticaNeue-Bold",
                             "size": "12"
                           }
-                        },
-                        {
+                    },
+                    {
                           "type": "label",
                           "text": "{{cardNumber}}",
                           "style": {
                             "font": "HelveticaNeue",
                             "size": "12"
                           }
-                        }
-                      ]
                     }
                   ]
                 }
+              }
             },
             "footer": {
               "tabs": {
