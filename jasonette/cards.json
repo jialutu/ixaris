@@ -22,15 +22,6 @@
             "{{#each corporations}}": {
               "items": {
                 "type": "horizontal",
-                "style": {
-                  "background": "#fafafa",
-                  "padding": "9",
-                  "spacing": "13",
-                  "width": "90",
-                  "align": "center",
-                  "distribution": "equalspacing",
-                  "height": "120"
-                },
                 "components": [
                   {
                     "type": "image",
@@ -38,7 +29,6 @@
                     "style": {
                       "width": "200",
                       "height": "125",
-                      "corner_radius": "19"
                     }
                   },
                   {
