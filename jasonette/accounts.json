@@ -1,17 +1,16 @@
 {
   "$jason": {
     "head": {
-      "data": {
-        "accounts": [
-          {
-            "currency": "GBP",
-            "cardNumber": "1"
+      "actions": {
+        "$load": {
+          "type": "$network.request",
+          "options": {
+            "url": "http://ec3a1990.ngrok.io/accounts"
           },
-          {
-            "currency": "GBP",
-            "cardNumber": "2"
+          "success": {
+            "type": "$render"
           }
-        ]
+        }
       },
       "templates": {
         "body": {
@@ -23,20 +22,15 @@
             }
           },
           "sections": [{
-            "items": {
-              "{{#each accounts}}": {
+            "items": [{
                 "type": "vertical",
                 "style": {
-                    "padding": "0"
+                    "padding": "16"
                   },
                 "components": [
                   {
-                    "type": "image",
-                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true"
-                  },
-                  {
                     "type": "label",
-                    "text": "{{currency}}",
+                    "text": "{{$jason.id}}",
                     "style": {
                       "font": "HelveticaNeue-Bold",
                       "size": "16"
@@ -44,15 +38,22 @@
                   },
                   {
                     "type": "label",
-                    "text": "{{cardNumber}}",
+                    "text": "{{$jason.programmeId}}",
+                    "style": {
+                      "font": "HelveticaNeue",
+                      "size": "16"
+                    }
+                  },
+                  {
+                    "type": "label",
+                    "text": "{{$jason.name}}",
                     "style": {
                       "font": "HelveticaNeue",
                       "size": "16"
                     }
                   }
                 ]
-              }
-            }
+            }]
           }]
             ,
             "footer": {

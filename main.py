@@ -62,7 +62,24 @@ def get_cards():
 
   results = json.loads(results.decode('utf-8'))
 
-  return results['cards']
+  return results
+
+def get_card(id):
+  with open('key.json', 'r') as f:
+    header = f.read()
+    header = json.loads(header.replace("'", '"'))
+
+  data = {}
+
+  req = request.Request("{}/managed_cards/{}/get".format(default_api, id), data=str(data).encode('utf-8'), headers=header, method='POST')
+  res = request.urlopen(req, timeout=5)
+
+  results = res.read()
+
+  results = json.loads(results.decode('utf-8'))
+  print(results)
+
+  return results
 
 def create_corporation(name, support_email, notification_email):
   with open('key.json', 'r') as f:
@@ -100,7 +117,7 @@ def get_corporations():
 
   results = json.loads(results.decode('utf-8'))
 
-  return results['identities']
+  return results
 
 def create_accounts(name, support_email, notification_email):
   with open('key.json', 'r') as f:
@@ -138,9 +155,10 @@ def get_accounts():
 
   results = json.loads(results.decode('utf-8'))
 
-  return results['profiles']
+  return results
 
 if __name__ == '__main__':
-  a = get_accounts()
+  get_token()
+  a = get_card("97753949937860608")
   #[print(i) for i in a if i['state'] == 'ACTIVE']
   print(str(a))

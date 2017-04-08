@@ -8,12 +8,27 @@ def cards():
 
   return data
 
+@app.route("/card")
+def card():
+  with open('card.json', 'r') as f:
+    data = f.read()
+
+  return data
+
 @app.route("/corporations")
 def corporations():
   with open('corporations.json', 'r') as f:
     data = f.read()
 
   return data
+
+@app.route("/accounts")
+def accounts():
+  with open('accounts.json', 'r') as f:
+    data = f.read()
+
+  return data
+
 
 if __name__ == "__main__":
   app.run(port=8000)

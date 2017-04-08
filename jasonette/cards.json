@@ -1,17 +1,16 @@
 {
   "$jason": {
     "head": {
-      "data": {
-        "cards": [
-          {
-            "currency": "GBP",
-            "cardNumber": "1"
+      "actions": {
+        "$load": {
+          "type": "$network.request",
+          "options": {
+            "url": "http://ec3a1990.ngrok.io/cards"
           },
-          {
-            "currency": "GBP",
-            "cardNumber": "2"
+          "success": {
+            "type": "$render"
           }
-        ]
+        }
       },
       "templates": {
         "body": {
@@ -24,19 +23,32 @@
           },
           "sections": [{
             "items": {
-              "{{#each cards}}": {
+              "{{#each $jason.cards}}": {
                 "type": "vertical",
                 "style": {
-                    "padding": "0"
+                    "padding": "16"
                   },
                 "components": [
                   {
                     "type": "image",
-                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true"
+                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
+                    "action": {
+                      "type": "$href",
+                      "options": {
+                        "url": "http://6c4cc477.ngrok.io/card",
+                        "method": "get",
+                        "data": {
+                          "id": "{{id.id}}"
+                        }
+                      },
+                      "success": {
+                        "type": "$render"
+                      }
+                    }
                   },
                   {
                     "type": "label",
-                    "text": "{{currency}}",
+                    "text": "Card number: {{cardNumber}}",
                     "style": {
                       "font": "HelveticaNeue-Bold",
                       "size": "16"
@@ -44,7 +56,7 @@
                   },
                   {
                     "type": "label",
-                    "text": "{{cardNumber}}",
+                    "text": "ID: {{id.id}}",
                     "style": {
                       "font": "HelveticaNeue",
                       "size": "16"
