@@ -80,7 +80,7 @@
               "success": {
                 "type": "$href",
                 "options": {
-                  "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json",
+                  "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/cards.json",
                   "transition": "replace"
                 }
               }
