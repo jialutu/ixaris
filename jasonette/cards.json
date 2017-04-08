@@ -19,26 +19,11 @@
             }
           },
           "sections": [{
-              "type": "vertical",
-                "components": [
-                    {
-                          "type": "label",
-                          "text": "something",
-                          "style": {
-                            "font": "HelveticaNeue-Bold",
-                            "size": "12"
-                          }
-                    },
-                    {
-                          "type": "label",
-                          "text": "else",
-                          "style": {
-                            "font": "HelveticaNeue",
-                            "size": "12"
-                          }
-                    }
-                  ]
-                }]
+              "items": {
+                "type": "label",
+                "text": "Label only item"
+              }
+            }]
             ,
             "footer": {
               "tabs": {
