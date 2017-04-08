@@ -2,37 +2,20 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations": [{
-          "type": "stories",
+        "corporations": {
           "items": {
             "type": "$network.request",
             "options": {
               "url": "http://ec3a1990.ngrok.io/corporations",
               "method": "get"
             }
-      },
+      }},
       "templates": {
         "body": {
-          "header": {
-            "style": {
-              "shy": "true"
-            },
-            "title": {
-              "type": "image",
-              "style": {
-                "width": "94",
-                "height": "27"
-              },
-              "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/logo.png"
-            },
-            "menu": {
-              "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/box.png"
-            }
-          },
           "sections": {
             "{{#each corporations}}": [
               {
-                "{{#if ('type' in this) && (type=='stories') }}": {
+
                   "type": "horizontal",
                   "items": {
                     "{{#each items}}": {
@@ -64,62 +47,6 @@
                     }
                   }
                 }
-              },
-              {
-                "{{#else}}": {
-                  "header": {
-                    "type": "horizontal",
-                    "style": {
-                      "background": "#ffffff",
-                      "padding": "9",
-                      "spacing": "13"
-                    },
-                    "components": [{
-                      "type": "image",
-                      "url": "{{avatar}}",
-                      "style": {
-                        "width": "38",
-                        "height": "38",
-                        "corner_radius": "19"
-                      }
-                    }, {
-                      "type": "vertical",
-                      "components": [{
-                        "type": "label",
-                        "text": "{{name}}",
-                        "style": {
-                          "font": "HelveticaNeue-Bold",
-                          "size": "12"
-                        }
-                      }, {
-                        "type": "label",
-                        "text": "{{location}} >",
-                        "style": {
-                          "font": "HelveticaNeue",
-                          "size": "11"
-                        }
-                      }]
-                    }, {
-                      "type": "space"
-                    }, {
-                      "type": "image",
-                      "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/dotdotdot.png",
-                      "style": {
-                        "padding_top": "10",
-                        "width": "25"
-                      }
-                    }]
-                  },
-                  "items": [{
-                    "style": {
-                      "width": "100%",
-                      "padding": "0"
-                    },
-                    "type": "image",
-                    "url": "{{content}}"
-                  }]
-                }
-              }
             ]
           },
           "footer": {
