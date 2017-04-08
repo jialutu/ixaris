@@ -21,9 +21,7 @@
           "sections": {
             "{{#each corporations}}": {
                 "type": "vertical",
-                "items": {
-                  "type": "vertical",
-                  "components": [
+                "components": [
                     {
                       "type": "image",
                       "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
@@ -34,7 +32,6 @@
                       }
                     },
                     {
-                      "type": "horizontal",
                       "components": [
                         {
                           "type": "label",
@@ -56,7 +53,6 @@
                     }
                   ]
                 }
-              }
             },
             "footer": {
               "tabs": {
