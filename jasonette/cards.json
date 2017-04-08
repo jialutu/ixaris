@@ -35,8 +35,8 @@
                       "type": "image",
                       "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
                       "style": {
-                        "width": "38",
-                        "height": "38",
+                        "width": "200",
+                        "height": "125",
                         "corner_radius": "19"
                       }
                     }, {
@@ -56,7 +56,7 @@
                           "size": "12"
                         }
                       }]
-                  }
+                  }]
                 }
             },
             "footer": {
