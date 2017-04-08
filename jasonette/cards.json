@@ -19,7 +19,7 @@
             }
           },
           "sections": {
-              "items": [{
+              "items": {
                 "type": "vertical",
                 "components": [
                   {
@@ -31,7 +31,7 @@
                     "text": "Doe"
                   }
                 ]
-              }]
+              }
             }
             ,
             "footer": {
