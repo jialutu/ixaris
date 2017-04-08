@@ -31,22 +31,31 @@
                       "distribution": "equalspacing",
                       "height": "120"
                     },
-                    "components": [
-                      {
+                    "components": [{
+                      "type": "image",
+                      "url": "{{avatar}}",
+                      "style": {
+                        "width": "38",
+                        "height": "38",
+                        "corner_radius": "19"
+                      }
+                    }, {
+                      "type": "vertical",
+                      "components": [{
                         "type": "label",
-                        "url": "{{currency}}",
+                        "text": "{{currency}}",
                         "style": {
+                          "font": "HelveticaNeue-Bold",
                           "size": "12"
                         }
-                      },
-                      {
+                      }, {
                         "type": "label",
                         "text": "{{cardNumber}}",
                         "style": {
+                          "font": "HelveticaNeue",
                           "size": "12"
                         }
-                      }
-                    ]
+                      }]
                   }
                 }
             },
