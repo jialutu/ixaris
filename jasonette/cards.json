@@ -20,9 +20,6 @@
           },
           "sections": {
               "items": [{
-                "type": "label",
-                "text": "Label only item"
-              }, {
                 "type": "vertical",
                 "components": [
                   {
