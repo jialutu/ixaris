@@ -20,9 +20,8 @@
           },
             "sections": {
               "{{#each corporations}}": {
-                  "type": "horizontal",
                   "items": {
-                    "type": "vertical",
+                    "type": "horizontal",
                     "style": {
                       "background": "#fafafa",
                       "padding": "9",
