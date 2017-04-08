@@ -9,97 +9,110 @@
           }
         ]
       },
-        "templates": {
-          "body": {
-            "header": {
+      "templates": {
+        "body": {
+          "header": {
             "title": "All cards",
             "style": {
               "background": "#646464",
               "color": "#ffffff"
             }
           },
-            "sections": {
-              "{{#each corporations}}": {
-                  "items": {
-                    "type": "horizontal",
+          "sections": {
+            "{{#each corporations}}": {
+              "items": {
+                "type": "horizontal",
+                "style": {
+                  "background": "#fafafa",
+                  "padding": "9",
+                  "spacing": "13",
+                  "width": "90",
+                  "align": "center",
+                  "distribution": "equalspacing",
+                  "height": "120"
+                },
+                "components": [
+                  {
+                    "type": "image",
+                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
                     "style": {
-                      "background": "#fafafa",
-                      "padding": "9",
-                      "spacing": "13",
-                      "width": "90",
-                      "align": "center",
-                      "distribution": "equalspacing",
-                      "height": "120"
-                    },
-                    "components": [{
-                      "type": "image",
-                      "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
-                      "style": {
-                        "width": "200",
-                        "height": "125",
-                        "corner_radius": "19"
-                      }
-                    }, {
-                      "type": "vertical",
-                      "components": [{
+                      "width": "200",
+                      "height": "125",
+                      "corner_radius": "19"
+                    }
+                  },
+                  {
+                    "type": "vertical",
+                    "components": [
+                      {
                         "type": "label",
                         "text": "{{currency}}",
                         "style": {
                           "font": "HelveticaNeue-Bold",
                           "size": "12"
                         }
-                      }, {
+                      },
+                      {
                         "type": "label",
                         "text": "{{cardNumber}}",
                         "style": {
                           "font": "HelveticaNeue",
                           "size": "12"
                         }
-                      }]
-                  }]
-                }
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             "footer": {
-            "tabs": {
-              "style": {
-                "background": "rgba(255,255,255,0.8)",
-                "color": "#000000"
-              },
-              "items": [{
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/home.png",
+              "tabs": {
                 "style": {
-                  "height": "21"
+                  "background": "rgba(255,255,255,0.8)",
+                  "color": "#000000"
                 },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/home.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/search.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/search.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/camera.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/heart.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/heart.json"
-              }, {
-                "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/profile.png",
-                "style": {
-                  "height": "21"
-                },
-                "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/profile.json"
-              }]
+                "items": [
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/home.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/home.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/search.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/search.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/camera.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/heart.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/heart.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/profile.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/profile.json"
+                  }
+                ]
+              }
             }
           }
-          }
         }
+      }
     }
   }
 }
