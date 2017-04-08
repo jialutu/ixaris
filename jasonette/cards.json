@@ -26,7 +26,7 @@
                 },
                 {
                           "type": "label",
-                          "text": "{{currency}}",
+                          "text": "something",
                           "style": {
                             "font": "HelveticaNeue-Bold",
                             "size": "12"
