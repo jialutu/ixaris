@@ -26,7 +26,7 @@ def get_token(programmeID="996141146944271", credentialCode="team-16", password=
   with open('key.json', 'w') as f:
     f.write(str(header))
 
-  return header
+  return token
 
 def issue_card(friendlyName, issuingProvider, processingProvider, nameOnCard, profileID="97593089101269248", ownerID="87593085012710413", currency="GBP"):
   with open('key.json', 'r') as f:

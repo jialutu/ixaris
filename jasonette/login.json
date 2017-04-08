@@ -74,7 +74,7 @@
                   "Content-Type": "application/json",
                   "X-callref": "{{$get.password}}",
                   "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
-                  "authorization": ""
+                  "authorization": "{{$jason.authentication_token}}"
                 }
               },
               "success": {
