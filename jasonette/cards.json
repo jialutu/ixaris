@@ -11,6 +11,13 @@
       },
         "templates": {
           "body": {
+            "header": {
+            "title": "All cards",
+            "style": {
+              "background": "#646464",
+              "color": "#ffffff"
+            }
+          },
             "sections": {
               "{{#each corporations}}": [
                 {
