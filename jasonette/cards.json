@@ -3,10 +3,20 @@
     "head": {
       "data": {
         "corporations": {
-            "type": "$network.request",
-            "options": {
-              "url": "http://ec3a1990.ngrok.io/cards",
-              "method": "get"
+            "action": {
+              "type": "$network.request",
+              "options": {
+                "url": "http://ec3a1990.ngrok.io/cards"
+              }
+            },
+            "success": {
+                "type": "$render"
+            },
+            "error": {
+              "type": "$render",
+              "options": {
+                "template": "empty_template"
+              }
             }
         },
         "templates": {
