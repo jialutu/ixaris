@@ -19,42 +19,44 @@
             }
           },
           "sections": {
-            "items": {
             "{{#each corporations}}": {
                 "type": "vertical",
-                "components": [
-                  {
-                    "type": "image",
-                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
-                    "style": {
-                      "width": "200",
-                      "height": "125",
-                      "corner_radius": "40"
-                    }
-                  },
-                  {
-                    "type": "horizontal",
-                    "components": [
-                      {
-                        "type": "label",
-                        "text": "{{currency}}",
-                        "style": {
-                          "font": "HelveticaNeue-Bold",
-                          "size": "12"
-                        }
-                      },
-                      {
-                        "type": "label",
-                        "text": "{{cardNumber}}",
-                        "style": {
-                          "font": "HelveticaNeue",
-                          "size": "12"
-                        }
+                "items": {
+                  "type": "vertical",
+                  "components": [
+                    {
+                      "type": "image",
+                      "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true",
+                      "style": {
+                        "width": "200",
+                        "height": "125",
+                        "corner_radius": "40"
                       }
-                    ]
-                  }
-                ]
-              }}
+                    },
+                    {
+                      "type": "horizontal",
+                      "components": [
+                        {
+                          "type": "label",
+                          "text": "{{currency}}",
+                          "style": {
+                            "font": "HelveticaNeue-Bold",
+                            "size": "12"
+                          }
+                        },
+                        {
+                          "type": "label",
+                          "text": "{{cardNumber}}",
+                          "style": {
+                            "font": "HelveticaNeue",
+                            "size": "12"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
             },
             "footer": {
               "tabs": {
