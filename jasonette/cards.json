@@ -19,10 +19,27 @@
             }
           },
           "sections": {
-              "items": {
+              "items": [{
                 "type": "label",
                 "text": "Label only item"
-              }
+              },
+            {
+        "type": "vertical",
+        "components": [
+          {
+            "type": "image",
+            "url": "https://jasonclient.org/img/john.png"
+          },
+          {
+            "type": "label",
+            "text": "John"
+          },
+          {
+            "type": "label",
+            "text": "Doe"
+          }
+        ]
+      }]
             }
             ,
             "footer": {
