@@ -2,17 +2,9 @@
   "$jason": {
     "head": {
       "data": {
-        "corporations": {
-          "$load": {
-              "type": "$network.request",
-              "options": {
-                "url": "http://ec3a1990.ngrok.io/cards"
-              }
-            },
-            "success": {
-               "type": "$render"
-            }
-        },
+        "corporations":
+          [{"currency": "GBP", "cardNumber": "1"}]
+        ,
         "templates": {
           "body": {
             "sections": {
