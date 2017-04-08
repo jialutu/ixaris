@@ -11,8 +11,7 @@
               "{{#each corporations}}": [
                 {
                   "type": "horizontal",
-                  "items":
-                  "{{#each items}}": {
+                  "items": {
                     "type": "vertical",
                     "style": {
                       "background": "#fafafa",
@@ -41,7 +40,6 @@
                     ]
                   }
                 }
-              }
               ]
             }
           }
