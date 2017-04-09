@@ -66,17 +66,6 @@
               "url": "http://fa2ce3ec.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
               "method": "get"
             },
-            "success": {
-              "type": "$session.set",
-              "options": {
-                "domain": "http://fa2ce3ec.ngrok.io",
-                "header": {
-                  "Content-Type": "application/json",
-                  "X-callref": "{{$get.password}}",
-                  "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
-                  "authorization": "{{$jason.token}}"
-                }
-              },
               "success": {
                 "type": "$href",
                 "options": {
