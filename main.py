@@ -93,7 +93,17 @@ def get_card(id):
   results = res.read()
 
   results = json.loads(results.decode('utf-8'))
-  print(results)
+
+  issuer = results['issuingProvider']
+  if issuer == 'Halifax':
+    results.update(
+        {'imageURL': 'https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true'})
+  elif issuer == 'Barclays':
+    results.update({
+                    'imageURL': 'https://github.com/jialutu/ixaris/blob/master/Credit_Card_BARCLAYCARD_INITIAL_FRONT_282x176.jpg?raw=true'})
+  else:
+    results.update(
+        {'imageURL': 'https://github.com/jialutu/ixaris/blob/master/bad-credit-merchant-account.jpg?raw=true'})
 
   return results
 

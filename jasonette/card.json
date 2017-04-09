@@ -89,7 +89,7 @@
                   "align": "center",
                   "font": "HelveticaNeue-Bold",
                   "size": "20",
-                  "padding": "0",
+                  "padding": "16",
                   "background": "#ff0000"
                 },
                     "text": "Delete card",
