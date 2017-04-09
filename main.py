@@ -62,7 +62,23 @@ def get_cards():
 
   results = json.loads(results.decode('utf-8'))
 
-  return results
+  cards = results['cards']
+
+  new_cardlist = []
+  for card in cards:
+    issuer = card['issuingProvider']
+    if issuer == 'Halifax':
+      card.update({'imageURL': 'https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true'})
+    elif issuer == 'Barclays':
+      card.update({'imageURL': 'https://github.com/jialutu/ixaris/blob/master/Credit_Card_BARCLAYCARD_INITIAL_FRONT_282x176.jpg?raw=true'})
+    else:
+      card.update({'imageURL': 'https://github.com/jialutu/ixaris/blob/master/bad-credit-merchant-account.jpg?raw=true'})
+
+    new_cardlist.append(card)
+
+  cards = {'cards': new_cardlist}
+
+  return cards
 
 def get_card(id):
   with open('key.json', 'r') as f:
@@ -158,7 +174,7 @@ def get_accounts():
   return results
 
 if __name__ == '__main__':
-  get_token()
-  a = get_card("97753949937860608")
+  #get_token()
+  a = get_cards()
   #[print(i) for i in a if i['state'] == 'ACTIVE']
   print(str(a))
