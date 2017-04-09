@@ -1,0 +1,128 @@
+{
+  "$jason": {
+    "head": {
+      "templates": {
+        "body": {
+          "header": {
+            "title": "Create new card",
+            "style": {
+              "background": "#646464",
+              "color": "#ffffff"
+            }
+          },
+          "sections": [{
+            "items": [{
+                "type": "space",
+                "height": "10"
+              }, {
+                "type": "textfield",
+                "name": "nameOnCard",
+                "style": {
+                  "size": "20",
+                  "font": "HelveticaNeue-Bold",
+                  "padding": "20"
+                },
+                "placeholder": "enter name on card"
+              }, {
+                "type": "space",
+                "height": "5"
+              }, {
+                "type": "issuingProvider",
+                "name": "nameOnCard",
+                "style": {
+                  "size": "20",
+                  "font": "HelveticaNeue-Bold",
+                  "padding": "20"
+                },
+                "placeholder": "enter issuing provider"
+              }, {
+                "type": "space",
+                "height": "5"
+              }, {
+                "type": "textfield",
+                "name": "processingProvider",
+                "style": {
+                  "size": "20",
+                  "font": "HelveticaNeue-Bold",
+                  "padding": "20"
+                },
+                "placeholder": "enter processing provider"
+              }, {
+                "type": "space",
+                "height": "5"
+              }, {
+                "type": "textfield",
+                "name": "friendlyName",
+                "style": {
+                  "size": "20",
+                  "font": "HelveticaNeue-Bold",
+                  "padding": "20"
+                },
+                "placeholder": "enter friendly name"
+              }, {
+                "type": "space",
+                "height": "5"
+              }, {
+                "type": "label",
+                "style": {
+                  "width": "100%",
+                  "align": "right",
+                  "font": "HelveticaNeue-Bold",
+                  "size": "20",
+                  "padding": "10"
+                },
+                    "text": "Create card >",
+                "action": {
+                  "type": "$network.request",
+                  "options": {
+                    "url": "http://fa2ce3ec.ngrok.io/cards/new/{{$get.nameOnCard}}&{{$get.issuingProvider}}&{{$get.processingProvider}}&{{$get.friendlyName}}",
+                    "method": "get"
+                  },
+                    "success": {
+                      "type": "$href",
+                      "options": {
+                        "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/cards.json",
+                        "transition": "replace"
+                      }
+                    }
+                  }
+                }
+              ]
+          }]
+            ,
+            "footer": {
+              "tabs": {
+                "style": {
+                  "background": "rgba(255,255,255,0.8)",
+                  "color": "#000000"
+                },
+                "items": [
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/home.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/corporations.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/profile.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/accounts.json"
+                  },
+                  {
+                    "image": "https://raw.githubusercontent.com/Jasonette/Instagram-UI-example/master/images/camera.png",
+                    "style": {
+                      "height": "21"
+                    },
+                    "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/cards.json"
+                  }
+                ]
+              }
+            }
+        }
+      }
+    }
+  }
+}

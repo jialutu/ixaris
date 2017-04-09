@@ -63,13 +63,13 @@
           "action": {
             "type": "$network.request",
             "options": {
-              "url": "http://ec3a1990.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
+              "url": "http://fa2ce3ec.ngrok.io/auth/{{$get.credentialCode}}/{{$get.password}}",
               "method": "get"
             },
             "success": {
               "type": "$session.set",
               "options": {
-                "domain": "http://ec3a1990.ngrok.io",
+                "domain": "http://fa2ce3ec.ngrok.io",
                 "header": {
                   "Content-Type": "application/json",
                   "X-callref": "{{$get.password}}",

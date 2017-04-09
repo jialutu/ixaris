@@ -5,7 +5,7 @@
         "$load": {
           "type": "$network.request",
           "options": {
-            "url": "http://ec3a1990.ngrok.io/corporations"
+            "url": "http://fa2ce3ec.ngrok.io/corporations"
           },
           "success": {
             "type": "$render"
@@ -29,6 +29,10 @@
                     "padding": "10"
                   },
                 "components": [
+                  {
+                    "type": "image",
+                    "url": "https://github.com/jialutu/ixaris/blob/master/345a22ad-0600-4d29-bd19-ef0dc9ed5c7e-0.jpg?raw=true"
+                  },
                   {
                     "type": "label",
                     "text": "yes",

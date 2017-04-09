@@ -5,7 +5,7 @@
         "$load": {
           "type": "$network.request",
           "options": {
-            "url": "http://ec3a1990.ngrok.io/accounts"
+            "url": "http://fa2ce3ec.ngrok.io/accounts"
           },
           "success": {
             "type": "$render"

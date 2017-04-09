@@ -5,7 +5,7 @@
         "$load": {
           "type": "$network.request",
           "options": {
-            "url": "http://ec3a1990.ngrok.io/cards/97753949937860608"
+            "url": "http://fa2ce3ec.ngrok.io/cards/97753949937860608"
           },
           "success": {
             "type": "$render"
@@ -30,7 +30,7 @@
                 "components": [
                   {
                     "type": "image",
-                    "url": "https://github.com/jialutu/ixaris/blob/master/170125-halifax-clarity-card_d_1x.png?raw=true"
+                    "url": "{{$jason.imageURL}}"
                   },
                   {
                     "type": "label",
@@ -79,7 +79,34 @@
                       "font": "HelveticaNeue",
                       "size": "16"
                     }
+                  }, {
+                "type": "space",
+                "height": "20"
+              }, {
+                "type": "label",
+                "style": {
+                  "width": "100%",
+                  "align": "center",
+                  "font": "HelveticaNeue-Bold",
+                  "size": "20",
+                  "padding": "10"
+                },
+                    "text": "Delete card",
+                "action": {
+                  "type": "$network.request",
+                  "options": {
+                    "url": "http://fa2ce3ec.ngrok.io/cards/destroy/97753949937860608",
+                    "method": "get"
+                  },
+                    "success": {
+                      "type": "$href",
+                      "options": {
+                        "url": "https://raw.githubusercontent.com/jialutu/ixaris/master/jasonette/cards.json",
+                        "transition": "replace"
+                      }
+                    }
                   }
+                }
                 ]
               }]
           }]

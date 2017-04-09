@@ -29,6 +29,13 @@ def accounts():
 
   return data
 
+@app.route("/new_card")
+def new_card():
+  with open('new_card.json', 'r') as f:
+    data = f.read()
+
+  return data
+
 
 if __name__ == "__main__":
   app.run(port=8000)

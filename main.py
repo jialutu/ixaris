@@ -97,6 +97,23 @@ def get_card(id):
 
   return results
 
+def delete_card(id):
+  with open('key.json', 'r') as f:
+    header = f.read()
+    header = json.loads(header.replace("'", '"'))
+
+  data = {}
+
+  req = request.Request("{}/managed_cards/{}/destroy".format(default_api, id), data=str(data).encode('utf-8'), headers=header, method='POST')
+  res = request.urlopen(req, timeout=5)
+
+  results = res.read()
+
+  results = json.loads(results.decode('utf-8'))
+  print(results)
+
+  return results
+
 def create_corporation(name, support_email, notification_email):
   with open('key.json', 'r') as f:
     header = f.read()

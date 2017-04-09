@@ -23,5 +23,13 @@ def cards():
 def card(id):
   return str(get_card(id)).replace("'", '"')
 
+@app.route("/cards/new/<nameOnCard>&<issuingProvider>&<processingProvider>&<friendlyName>")
+def new_card(friendlyName, issuingProvider, processingProvider, nameOnCard):
+  return issue_card(friendlyName, issuingProvider, processingProvider, nameOnCard)
+
+@app.route("/cards/destroy/<id>")
+def destroy_card(id):
+  return str(destroy_card(id)).replace("'", '"')
+
 if __name__ == "__main__":
   app.run()
