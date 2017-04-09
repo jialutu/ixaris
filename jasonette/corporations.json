@@ -35,7 +35,7 @@
                   },
                   {
                     "type": "label",
-                    "text": "yes",
+                    "text": "{{name}}",
                     "style": {
                       "font": "HelveticaNeue-Bold",
                       "size": "24"
@@ -43,7 +43,7 @@
                   },
                   {
                     "type": "label",
-                    "text": "no",
+                    "text": "{{profileId}}",
                     "style": {
                       "font": "HelveticaNeue",
                       "size": "16"

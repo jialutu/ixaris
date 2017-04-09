@@ -107,12 +107,9 @@ def delete_card(id):
   req = request.Request("{}/managed_cards/{}/destroy".format(default_api, id), data=str(data).encode('utf-8'), headers=header, method='POST')
   res = request.urlopen(req, timeout=5)
 
-  results = res.read()
-
-  results = json.loads(results.decode('utf-8'))
-  print(results)
-
-  return results
+  # results = res.read()
+  #
+  # results = json.loads(results.decode('utf-8'))
 
 def create_corporation(name, support_email, notification_email):
   with open('key.json', 'r') as f:

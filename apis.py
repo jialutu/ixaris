@@ -29,7 +29,8 @@ def new_card(friendlyName, issuingProvider, processingProvider, nameOnCard):
 
 @app.route("/cards/destroy/<id>")
 def destroy_card(id):
-  return str(destroy_card(id)).replace("'", '"')
+  destroy_card(id)
+  return None
 
 if __name__ == "__main__":
   app.run()

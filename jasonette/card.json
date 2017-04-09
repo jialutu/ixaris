@@ -15,7 +15,7 @@
       "templates": {
         "body": {
           "header": {
-            "title": "Card ID 97753949937860608",
+            "title": "97753949937860608",
             "style": {
               "background": "#646464",
               "color": "#ffffff"
@@ -89,7 +89,8 @@
                   "align": "center",
                   "font": "HelveticaNeue-Bold",
                   "size": "20",
-                  "padding": "10"
+                  "padding": "0",
+                  "background": "#ff0000"
                 },
                     "text": "Delete card",
                 "action": {

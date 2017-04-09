@@ -33,19 +33,31 @@
                     "type": "image",
                     "url": "{{imageURL}}",
                     "action": {
-                      "type": "$href",
+                    "type": "$network.request",
+                    "options": {
+                      "url": "http://fa2ce3ec.ngrok.io/cards/{{$get.credentialCode}}/{{$get.password}}",
+                      "method": "get"
+                    },
+                    "success": {
+                      "type": "$session.set",
                       "options": {
-                        "url": "http://6c4cc477.ngrok.io/card",
-                        "method": "get",
-                        "data": {
-                          "id": "{{id.id}}"
+                        "domain": "http://fa2ce3ec.ngrok.io",
+                        "header": {
+                          "Content-Type": "application/json",
+                          "X-callref": "{{$get.password}}",
+                          "X-programmeKey": "{{$get.credentialCode}}|996141146944271",
+                          "authorization": "{{$jason.token}}"
                         }
                       },
                       "success": {
-                        "type": "$render"
+                        "type": "$href",
+                        "options": {
+                          "url": "http://fa2ce3ec.ngrok.io/card",
+                          "transition": "replace"
+                        }
                       }
                     }
-                  },
+                  }},
                   {
                     "type": "label",
                     "text": "Card number: {{cardNumber}}",
